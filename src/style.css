@@ -8,6 +8,9 @@ ul {
 footer {
   text-align: center;
 }
+#city {
+  color: gray;
+}
 #main-emoji {
   scale: 2;
   display: block;
