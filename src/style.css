@@ -1,3 +1,23 @@
 h1 {
   color: blue;
 }
+ul {
+  list-style-type: none;
+  translate: -20px;
+}
+footer {
+  text-align: center;
+}
+#main-emoji {
+  scale: 2;
+  display: block;
+  margin: auto;
+}
+.tempUnits {
+  font-size: 15px;
+  vertical-align: top;
+}
+#weatherApp {
+  display: block;
+  margin: auto;
+}
