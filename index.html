@@ -11,6 +11,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -40,12 +41,18 @@
           </form>
 
           <div class="container">
-            <div class="row mb-5">
+            <div class="row mb-3">
               <div class="col-6">
                 <div class="card border-0">
                   <div class="card-body">
-                    <h1 class="text-warning" id="city">London</h1>
-                    <p class="fs-4" id="day">Sunday 09:00</p>
+                    <h1 class="text-dark" id="city">London</h1>
+                    <p>
+                      <span id="day">Sunday 09:00</span>
+                      <br />
+                      <span class="text-dark" id="weather-description"
+                        >Clear</span
+                      >
+                    </p>
                   </div>
                 </div>
               </div>
@@ -73,13 +80,10 @@
                   </div>
                 </div>
                 <div class="row px-2 mb-4">
-                  <span class="card border-0 pt-2 pb-2">
+                  <span class="card border-0 pt-2 pb-2" id="weather-conditions">
                     <ul>
-                      <li>Humidity: <span id="humidity">16%</span></li>
-                      <li>Wind Speed: <span id="wind-speed">2 km/h</span></li>
-                      <li>
-                        Precipitation: <span id="precipitation">70%</span>
-                      </li>
+                      <li>Humidity: <span id="humidity">16</span>%</li>
+                      <li>Wind Speed: <span id="wind-speed">2</span> km/h</li>
                     </ul>
                   </span>
                 </div>
@@ -87,7 +91,7 @@
             </div>
           </div>
 
-          <div class="container text-center mt-4">
+          <div class="container text-center mt-2">
             <div class="row mb-3">
               <div class="col px-3">
                 <div class="card border-0">
