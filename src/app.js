@@ -1,9 +1,3 @@
-let apiKey = `6c24b098b2bd19340ed515f93a30a1a9`;
-let city = "London";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayTemp);
-
 function displayTemp(response) {
   let temperatureElement = document.querySelector("#temp");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -54,4 +48,20 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
   return `${day} ${hours}:${minutes}`;
+}
+
+let form = document.querySelector("#enter-city-form");
+form.addEventListener("submit", activateForm);
+
+function search(city) {
+  let apiKey = `6c24b098b2bd19340ed515f93a30a1a9`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayTemp);
+}
+
+function activateForm(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  search(cityInput.value);
 }
