@@ -22,7 +22,7 @@ footer {
   font-weight: bolder;
   margin-bottom: 0;
 }
-#day {
+#date {
   font-size: 20px;
   font-weight: bolder;
   opacity: 60%;
@@ -61,7 +61,4 @@ footer {
   text-decoration: none;
   color: black;
   opacity: 80%;
-}
-#spacing {
-  margin-bottom: 0;
 }
