@@ -15,7 +15,15 @@ li::first-letter {
   font-size: 17px;
   vertical-align: top;
 }
-
+.forecastTemperatures {
+  font-size: 17px;
+}
+.maxTemp {
+  opacity: 80%;
+}
+.minTemp {
+  opacity: 40%;
+}
 #weather-description {
   font-size: 16px;
   font-weight: 600;
@@ -67,4 +75,7 @@ li::first-letter {
   text-decoration: none;
   color: black;
   opacity: 80%;
+}
+#forecast-day {
+  opacity: 70%;
 }
