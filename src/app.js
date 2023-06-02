@@ -21,6 +21,31 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row mb-3">`;
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col px-3">
+          <div class="card border-0">
+            <h4 class="card-title fs-5" id="forecast-day">${day}</h4>
+              <p class="fs-2">
+                ☀️ <br />
+                <span class="forecastTemperatures">
+                  <span class="maxTemp">26˚ </span>
+                  <span class="minTemp">12˚</span>
+                </span>
+              </p>
+          </div>
+        </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemp(response) {
   console.log(response.data);
   celciusTemp = response.data.main.temp;
@@ -89,3 +114,5 @@ function showCelcius(event) {
   let currentTemp = document.querySelector("#temp");
   currentTemp.innerHTML = Math.round(celciusTemp);
 }
+
+displayForecast();
