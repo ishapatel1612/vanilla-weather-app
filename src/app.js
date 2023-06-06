@@ -115,4 +115,4 @@ function activateForm(event) {
   search(cityInput.value);
 }
 
-forecastDay();
+search("London");
